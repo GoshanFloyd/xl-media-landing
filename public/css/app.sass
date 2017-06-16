@@ -1,0 +1,390 @@
+$grayColor: rgb(247,247,247)
+$whiteColor: white
+$greenLightColor: #B0FF85
+$greenColor: rgb(114,207,63)
+$blackColor: black
+$deepGrayColor: rgb(57,57,57)
+$lightGrayColor: rgb(93,93,93)
+$deepBlueColor: rgb(42,46,62)
+
+$footerColorBackground: #42485C
+
+$fontHeaderTitle: RopaMixItalic
+$fontMenuItem: RopaMixItalic
+$fontCallLink: Verdana
+$fontMainFormArticle: RopaMixItalic
+$fontMainFormInput: Verdana
+$fontAboutUsArticle: RopaMixItalic
+$fontCertificateTitle: RopaMixItalic
+$fontArticleContact: RopaMixItalic
+$fontArticleFooter: RopaMixItalic
+$fontTitleServices: RopaMixItalic
+
+@font-face
+  font-family: RopaMixBold
+  src: url(../fonts/RopaMixProExtraBoldItalic.otf)
+
+@font-face
+  font-family: RopaMixItalic
+  src: url(../fonts/RopaMixPro-Italic.otf)
+
+@font-face
+  font-family: Verdana
+  src: url(../fonts/verdana.ttf)
+
+html, body
+  background: $grayColor !important
+
+header
+  background: url(../img/header-background.png) no-repeat right center
+  padding-bottom: 40%
+  position: relative
+  background-size: contain
+
+  @media(max-width: 768px)
+    padding: 0 !important
+
+  .logo-image
+    @media(max-width: 768px)
+      display: block
+      box-sizing: border-box
+      padding: 20px
+
+      &>img
+        width: 100%
+
+  .overflow-panel-header
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    @media(max-width: 768px)
+      position: relative
+      background: linear-gradient(to bottom, $whiteColor 0%,$grayColor 100%)
+
+    .header-title
+      font-family: $fontHeaderTitle
+      padding-left: 12%
+      font-size: 3em
+      margin-bottom: 5% !important
+      color: $whiteColor
+      margin-top: 10px
+      text-align: center
+      @media(max-width: 768px)
+        padding: 0
+        color: rgba($blackColor,.8)
+        line-height: 1em
+
+    .header-main-menu
+      background: transparent
+
+      li
+        margin: 0 10px
+
+        a
+          color: $greenLightColor
+          font-family: $fontMenuItem
+          font-size: 1.8em
+          background: transparent !important
+          transition: all .3s
+          &:hover
+            color: $whiteColor
+
+  .overflow-header-phone
+    position: absolute
+    right: 0
+    top: 0
+
+    @media(max-width: 768px)
+      position: relative
+
+    .call-link
+      display: block
+      color: $whiteColor
+      font-family: $fontCallLink
+      font-weight: bold
+      padding: 15px 20px
+      font-size: 1.8em
+
+      @media(max-width: 768px)
+        text-align: center
+        color: rgba($blackColor,.8)
+
+    .call-button-block
+      @media(max-width: 768px)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-flow: row
+        margin: 10px 0
+
+      i
+        font-size: 2.5em
+        color: $greenColor
+
+      button
+        background: $greenColor
+        color: rgba($whiteColor,.7)
+        font-weight: bold
+        border: 0
+        margin-left: 15px
+        padding: 5px 10px
+        font-size: 1.6em
+        border-radius: 20px
+        outline: none !important
+        transition: all .3s
+
+        &:hover
+          color: rgba($whiteColor,1)
+
+main
+  .after-header-slider
+    margin: 15px 0
+
+    .slider-client-item-list
+      &> li
+        display: flex
+        justify-content: center
+        align-items: center
+        @media(max-width: 768px)
+          box-sizing: border-box
+          padding-left: 35px
+          padding-right: 10px
+
+        &>img
+          max-height: 75px
+          filter: grayscale(100%)
+          transition: all .3s
+          @media(max-width: 768px)
+            margin: 10px
+            box-sizing: border-box
+            //max-width: 350px
+            height: 75px
+
+          @media(max-width: 768px)
+            filter: grayscale(0) !important
+
+          &:hover
+            filter: grayscale(0)
+
+
+  .main-form
+    background-image: url(../img/background-form.png)
+    background-size: cover
+
+    form
+      padding: 20% 0
+      background-image: url(../img/background-gray-form.png)
+      background-size: cover
+
+      .uk-form-row
+        padding-right: 20%
+        text-align: right
+        @media(max-width: 768px)
+          text-align: center
+          padding: 0 !important
+
+        article
+          color: $whiteColor
+          font-family: $fontMainFormArticle
+          font-size: 1.8em
+          line-height: 1.2em
+
+      input[type='text'],
+      input[type='tel']
+        max-width: 240px
+        width: 100%
+        color: rgba($blackColor,.8)
+        background: rgba($whiteColor,.7)
+        border: 0
+        padding: 5px
+        box-sizing: border-box
+        border-radius: 3px
+        font-size: 1.6em
+        font-family: $fontMainFormInput
+
+      input[type='submit']
+        max-width: 240px
+        width: 100%
+        background: $greenColor
+        color: $blackColor
+        border: 0
+        box-sizing: border-box
+        border-radius: 5px
+        padding: 10px
+        font-size: 1.2em
+        font-family: $fontMainFormInput
+        font-weight: bold
+
+  .about-us
+    background: $deepBlueColor
+    padding: 40px 0
+
+    .article-about
+      padding: 0 20px
+
+      article
+        padding: 30px 20px 60px 20px
+        font-family: $fontAboutUsArticle
+        color: $whiteColor
+        font-size: 2em
+        background: rgba($whiteColor,.1)
+        border-radius: 10px
+        line-height: 1.2em
+
+        span
+          color: $greenColor
+
+    .about-background
+      background: url(../img/about-image.png) no-repeat center center
+      background-size: cover
+      height: 100%
+      position: relative
+      @media(max-width: 768px)
+        padding-bottom: 100%
+        box-sizing: border-box
+      &:before
+        content: ' '
+        position: absolute
+        top: 0
+        left: -5%
+        right: 0
+        background: rgba($deepBlueColor,.4)
+        padding-bottom: 20%
+
+      &:after
+        content:  ' '
+        position: absolute
+        bottom: 0
+        left: -5%
+        right: 0
+        background: rgba($greenColor,.4)
+        padding-bottom: 20%
+
+  .certificate-slider
+    padding: 40px 0
+
+    h3
+      font-family: $fontCertificateTitle
+      color: $deepGrayColor
+      font-size: 2.5em
+      margin: 0
+      line-height: 1.2em
+
+    .uk-slidenav-position
+      margin: 20px 0
+
+    .uk-dotnav
+      margin-top: 10px
+
+      li
+        &.uk-active
+          a
+            background: $greenColor
+        a
+          background: $lightGrayColor
+
+  .contacts-form-block
+    position: relative
+
+    .overflow-contact-panel
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 50%
+      background: url(../img/contacts-background.png) no-repeat center center
+      background-size: cover
+      display: flex
+      justify-content: center
+      align-items: center
+      @media(max-width: 768px)
+        width: 100%
+        position: relative
+        background: rgba($deepGrayColor,.7)
+        padding: 30px 0
+
+      form
+
+        article
+          font-family: $fontArticleContact
+          color: $whiteColor
+          font-size: 2em
+          line-height: 1em
+
+        input:not([type='submit'])
+          border: 1px solid $deepGrayColor
+          color: $blackColor
+          font-size: 1.6em
+          box-sizing: border-box
+          width: 100%
+          background: rgba($whiteColor,.7)
+          padding: 5px
+          max-width: 240px
+          border-radius: 5px
+
+        button
+          background: $greenColor
+          color: $whiteColor
+          border-radius: 5px
+          border: 0
+          box-sizing: border-box
+          max-width: 240px
+          width: 100%
+          font-size: 1.6em
+          padding: 5px
+          word-wrap: normal
+
+  .our-services
+    padding: 40px 0
+    h2
+      font-family: $fontTitleServices
+      font-size: 2em
+    h3
+      font-family: $fontTitleServices
+      color: $fontHeaderTitle
+      font-size: 2em
+
+footer
+  background: $footerColorBackground
+  border-bottom: 15px solid $greenColor
+
+  article
+    padding: 40px 20px 15px
+    color: $whiteColor
+    font-family: Arial
+    font-size: 1.8em
+    line-height: 1.2em
+    text-align: left
+    box-sizing: border-box
+    @media(max-width: 768px)
+      text-align: center !important
+    a
+      color: $whiteColor
+
+    &.footer-article
+      text-align: left
+
+    &.contact-article
+      text-align: right
+
+
+.modal-service
+  h3
+    font-family: RopaMixPro
+    color: $deepGrayColor
+    font-size: 1.5em
+    text-align: center
+
+
+
+
+
+
+
+
+
+
+
+
